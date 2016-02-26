@@ -4,6 +4,8 @@
 
 
 
++ For new rows, add the class .ui-name-row
+
 
 ### References
 
