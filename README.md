@@ -65,9 +65,16 @@ Example a dropdown list.
     .list-detail {}
 ```
 
+### Layouts design
 
+Problem: Designing a proper css layout can be cumbersome.
+Solution: 
+1. Separate views and components
+2. Separate views for presentation (static, dynamic rendering) and views for actions (button)
+3. Views for `presentation` should use BEM naming pattern
+4. Views for `actions` should use js-hook naming pattern
+5. Use rows and colums naming for designing layouts
 
-+ For new rows, add the class .ui-name-row
 
 
 ### References
