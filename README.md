@@ -42,7 +42,29 @@ img {
 ```
 
 ### Organize the Stylesheet with a Top-down Structure
-+ NOTE:Throw some examples here
+
+Example a dropdown list.
+```html
+<div class='dropdown dropdown-list'>
+  <div class='list'>
+    <div class='list-image'></div>
+    <div class='list-detail'></div>
+  </div>
+</div>
+```
+
+```css
+
+/* structure the css based on the html structure 
+ * add indentation if the html is nested
+**/
+.dropdown {}
+.dropdown-list{}
+  .list {}
+    .list-image {}
+    .list-detail {}
+```
+
 
 
 + For new rows, add the class .ui-name-row
