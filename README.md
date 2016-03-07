@@ -94,6 +94,20 @@ Always ensure that there is a View (a.k.a container or box) that holds a compone
 
 To ensure that all UI designs fit nicely on the mobile, follow the `@320px principle`. All UI design (components) should be resizable to 320px, and still retain it's functionality. 
 
+### Naming Repeating Components
+
+If there are multiple similar components on the same page (e.g. modal popup), the naming can be repetitive:
+
+```html
+<div class="modal-report">...</div>
+<div class="modal-alert">...</div>
+<div class="modal-confirm">...</div>
+<div class="modal-confirm-delete">...</div>
+<div class="modal-confirm-update">...</div>
+```
+There are three modal confirms markup in the html body. This is bad. One way is to create a single dynamic modal - one whose content can be replaced with a template. That way, we can keep the code DRY.
+
+
 ### References
 
 1. [CSS Architecture New Best Practices](http://www.sitepoint.com/css-architectures-new-best-practices/)
