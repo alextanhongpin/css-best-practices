@@ -75,6 +75,21 @@ Solution:
 4. Views for `actions` should use js-hook naming pattern
 5. Use rows and colums naming for designing layouts
 
+### Components in a View
+
+Always ensure that there is a View (a.k.a container or box) that holds a component. It is easier to compose the layout this way. Another benefit is that rendering on the JavaScript side is simpler - just render the ShareComponent into the ShareView (else you might resort to append the view, which will affects the layout composition).
+
+```html
+
+<div id=ShareView>
+  <div id=ShareComponent class=share>
+    <div class=share-link>Facebook</div>
+    <div class=share-link>Google+</div>
+    <div class=share-link>Twitter</div>
+  </div>
+</div>
+
+```
 
 
 ### References
