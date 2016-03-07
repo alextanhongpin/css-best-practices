@@ -90,7 +90,9 @@ Always ensure that there is a View (a.k.a container or box) that holds a compone
 </div>
 
 ```
+### Mobile First
 
+To ensure that all UI designs fit nicely on the mobile, follow the `@320px principle`. All UI design (components) should be resizable to 320px, and still retain it's functionality. 
 
 ### References
 
