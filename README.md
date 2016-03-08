@@ -99,13 +99,47 @@ To ensure that all UI designs fit nicely on the mobile, follow the `@320px princ
 If there are multiple similar components on the same page (e.g. modal popup), the naming can be repetitive:
 
 ```html
+<!--BAD: does not share the same component classes-->
 <div class="modal-report">...</div>
 <div class="modal-alert">...</div>
 <div class="modal-confirm">...</div>
 <div class="modal-confirm-delete">...</div>
 <div class="modal-confirm-update">...</div>
+
+<!--OK: with BEM modifiers-->
+<div class="modal-popup modal--alert">...</div>
+<div class="modal-popup modal--confirm">...</div>
+
+<!--OK: with data-attributes-->
+<div class="modal-popup" data-role="alert">...</div>
+<div class="modal-popup" data-role="confirm">...</div>
+
+<!--OK: with id (but not suitable for lists)-->
+<div class="modal-popup" id="modalAlert">...</div>
+<div class="modal-popup" id="modalConfirm">...</div>
 ```
-There are three modal confirms markup in the html body. This is bad. One way is to create a single dynamic modal - one whose content can be replaced with a template. That way, we can keep the code DRY.
+There are three modal confirms markup in the html body. This is bad. One way is to create a single dynamic modal - one whose content can be replaced with a template. That way, we can keep the code DRY. Another possibility is to create one single component in which you can pass in template as options:
+
+```javascript
+  var modalAlert = new ModalPopup({
+    template: "<div>This is an alert!</div>", // string template for content
+    btnConfirm: "OK", // set the text to "OK"
+    btnCancel: null // will not show the button
+  });
+  
+  var modalForm = new ModalPopup({
+    template: "<div class='report-view'><form>...some form here</form></div>",
+    btnConfirm: "SUBMIT", 
+    btnCancel: "Cancel",
+    onConfirm: function () {
+      // do something once the user clicks the confirm button
+    },
+    onCancel: function () {
+      // do something once the user clicks the cancel button
+    }
+  });
+
+```
 
 
 ### References
