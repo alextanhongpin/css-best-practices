@@ -142,6 +142,12 @@ There are three modal confirms markup in the html body. This is bad. One way is 
 ```
 
 
+### Structuring CSS Components
+
+Each components should be placed in `View`. The `View` is synonymous to `Box` or `Container`. The purpose of the `View` is for managing the positioning of the components. Since the properties for the components are shared through their classes, it is best not to include positional properties in the component's class. The structure is as follow:  
+
+> main > layout > view > components
+
 ### References
 
 1. [CSS Architecture New Best Practices](http://www.sitepoint.com/css-architectures-new-best-practices/)
