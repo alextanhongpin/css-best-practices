@@ -74,6 +74,9 @@ Solution:
 3. Views for `presentation` should use BEM naming pattern
 4. Views for `actions` should use js-hook naming pattern
 5. Use rows and colums naming for designing layouts
+6. Layout determine the structure of the page, design it well.
+7. Layout might change according to the screen size.
+8. Some common layout is the Header-Footer-Layout.
 
 ### Components in a View
 
@@ -147,6 +150,8 @@ There are three modal confirms markup in the html body. This is bad. One way is 
 Each components should be placed in `View`. The `View` is synonymous to `Box` or `Container`. The purpose of the `View` is for managing the positioning of the components. Since the properties for the components are shared through their classes, it is best not to include positional properties in the component's class. The structure is as follow:  
 
 > main > layout > view > components
+
+
 
 ### References
 
