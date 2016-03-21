@@ -151,6 +151,37 @@ Each components should be placed in `View`. The `View` is synonymous to `Box` or
 
 > main > layout > view > components
 
+### Responsive Typography
+
+Typography should be designed to be responsive. Do not use `rem` or `em` to set the responsive fonts - it is not a good idea to scale the font-size linearly. Small fonts will be illegible that way. Instead you can adapt the following pattern: 
+
+```css
+  /* .{font-weight}-{font-size}-{color} */
+  .medium-36px-silver {
+    font-weight: medium;
+    font-size: 36px;
+    color: #999;
+  }
+  
+  /* another alternative, but probably inefficient */
+  [class*="medium"] {
+    font-weight: medium;
+  }
+  [class*="36px"] {
+    font-size: 36px;
+  }
+  [class*="silver"] {
+    color: #999;
+  }
+  
+  @media (max-width: 720px) {
+  
+    /* targets all classes that contains the keyword `36px` */
+    [class*="36px"] {
+      font-size: 20px;
+    }
+  }
+```
 
 
 ### References
