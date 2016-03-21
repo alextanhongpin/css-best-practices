@@ -17,7 +17,7 @@
 
 
 ### Use an Icon Element
-+ Instead of `spans`, use the `i` elements for icons. It makes it easier to identify the icons location on the page.
++ Instead of `spans`, use the `i` elements for icons. It makes it easier to identify the icons location on the page. Still using sprite images instead of SVG icons? Try using FontCustom - it helps generate the complete `.css` and `SVG fonts` for your project. You just need to provide the SVG icons templates.
 ```css 
 <p><i class="icon icon-comment"></i>23 comments</p>
 ...
