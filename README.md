@@ -184,6 +184,36 @@ Typography should be designed to be responsive. Do not use `rem` or `em` to set 
 ```
 
 
+### Debugging Spacing
+
+Do not mix horizontal (left and right) padding/margin with vertical (spacing/break) padding/margin.
+
+
+```css
+.br {
+  height: 20px; /* default */
+  display: block;
+  width: 100%;
+}
+/* When debugging, just use jquery to select all the .br elements and append the class is debugging. */
+.br--20.is-debugging {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.br--10.is-debugging {
+  background: rgba(0, 255, 0, 0.5);
+}
+
+```
+### Checklist for UI Designer/Developer
+
+- [ ] section
+- [ ] padding/margin
+- [ ] responsive
+- [ ] media-query
+- [x] font-size
+
+
 ### References
 
 1. [CSS Architecture New Best Practices](http://www.sitepoint.com/css-architectures-new-best-practices/)
