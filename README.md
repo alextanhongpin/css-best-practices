@@ -213,6 +213,20 @@ Do not mix horizontal (left and right) padding/margin with vertical (spacing/bre
 - [ ] media-query
 - [x] font-size
 
+## Style vertical and horizontal space differently
+
+- For horizontal spacing, use a custom `<Break height={10}/>` component that accepts a height props. 
+- For left/right padding, use css to customize
+- If we have multiple columns in a row, use CSS-grid to separate them, rather than using a div with a fix width, or spaces.
+- Avoid having borders in a component, this complicates thing when we need to add padding to them. Set the border at the parent component instead.
+
+## Fonts
+
+Create a base font without height and width, but just inherits the font family. Create custom fonts headings from this base font to reuse them.
+
+## Constants
+
+Use css variables for the colors/margin. But if you need them programmatically in JS, you might want to create another file to store these values. This really depends on your use case - if you are exporting them to be used as a package, you might want to make the colors available for both css and js.
 
 ### References
 
